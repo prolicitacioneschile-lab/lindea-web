@@ -1,31 +1,51 @@
 import PageShell from "./PageShell";
 import { waLink } from "../lib/whatsapp";
-import { comunas } from "../data/site";
+import { joinComunas } from "../data/site";
+
+function Foto() {
+  return (
+    <figure>
+      <img
+        src="/images/gonzalo-pozo.webp"
+        alt="Gonzalo Pozo, fundador de Lindea Propiedades"
+        width="900"
+        height="1125"
+        className="w-full max-w-sm mx-auto lg:max-w-none rounded-2xl object-cover shadow-sm"
+      />
+      <figcaption className="mt-4 text-center lg:text-left">
+        <span className="block font-bold text-ink">Gonzalo Pozo</span>
+        <span className="block text-sm text-stone">Fundador · Lindea Propiedades</span>
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function QuienesSomos() {
   return (
     <PageShell
-      eyebrow="Clientes Lindea"
+      eyebrow="Nosotros"
       title="Quiénes somos"
-      intro="Lindea Propiedades nace para simplificar lo que a muchos propietarios les quita tiempo y tranquilidad: arrendar y administrar. Somos un servicio de acompañamiento cercano, ordenado y transparente."
+      intro="Lindea Propiedades nace para simplificar lo que a muchos propietarios les quita tiempo y tranquilidad: vender, arrendar y administrar. Somos un servicio de acompañamiento cercano, ordenado y transparente."
+      aside={<Foto />}
     >
       <div className="space-y-6 text-stone leading-relaxed">
         <p>
-          Creemos que arrendar una propiedad no debería significar vivir pendiente
+          Creemos que gestionar una propiedad no debería significar vivir pendiente
           de fechas de pago, llamados y trámites. Por eso acompañamos a cada
-          propietario en dos momentos clave: encontrar al arrendatario adecuado y
-          mantener la gestión del arriendo mes a mes, siempre con información clara
-          y decisiones que quedan en tus manos.
+          propietario en los momentos clave: encontrar al comprador o al
+          arrendatario adecuado y, si lo necesitas, mantener la gestión del arriendo
+          mes a mes, siempre con información clara y decisiones que quedan en tus
+          manos.
         </p>
         <p>
           Trabajamos con un principio simple: <strong className="text-ink font-semibold">tú
           mantienes el control de tu propiedad y nosotros coordinamos la
           gestión</strong>. Cada servicio y cada facultad se acuerdan por escrito,
-          sin letra chica, y cada mes recibes una rendición que puedes revisar con
-          tranquilidad.
+          sin letra chica, y si administramos tu arriendo, cada mes recibes una
+          rendición que puedes revisar con tranquilidad.
         </p>
         <p>
-          Estamos comenzando en {comunas.join(", ")} y comunas cercanas de Santiago,
+          Estamos comenzando en {joinComunas()} y comunas cercanas de Santiago,
           con la cercanía de un equipo pequeño que conoce cada propiedad que atiende
           y responde de forma directa.
         </p>

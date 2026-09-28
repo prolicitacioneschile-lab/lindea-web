@@ -18,7 +18,7 @@ export default function Services() {
         <p className="mt-5 text-lg font-light text-stone leading-relaxed">{services.text}</p>
       </div>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-2">
+      <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {services.blocks.map((b) => (
           <div key={b.title} className="group flex flex-col rounded-2xl border border-line p-8 md:p-10 transition-colors hover:border-forest/40">
             <h3 className="text-2xl font-bold text-ink">{b.title}</h3>

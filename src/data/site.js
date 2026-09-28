@@ -22,7 +22,21 @@ export const contact = {
   scheduleLine2: "de 08:00 a 20:00 hrs.",
 };
 
-export const comunas = ["La Florida", "Macul", "Ñuñoa"];
+export const comunas = [
+  "La Florida",
+  "Macul",
+  "Ñuñoa",
+  "Las Condes",
+  "Providencia",
+  "La Reina",
+  "Peñalolén",
+];
+
+// Une una lista como texto natural: "A, B y C".
+export function joinComunas(list = comunas) {
+  if (list.length <= 1) return list.join("");
+  return `${list.slice(0, -1).join(", ")} y ${list[list.length - 1]}`;
+}
 
 export const nav = [
   { label: "Servicios", href: "/#servicios" },
@@ -51,8 +65,8 @@ export const intro = {
 
 export const services = {
   eyebrow: "A tu medida",
-  title: "Un buen arriendo empieza con una buena gestión.",
-  text: "Desde encontrar al arrendatario hasta acompañarte cada mes. Elige el apoyo que necesita tu propiedad.",
+  title: "Una buena gestión hace la diferencia.",
+  text: "Vender, arrendar o delegar la administración mes a mes. Elige el apoyo que necesita tu propiedad.",
   blocks: [
     {
       title: "Arrendamos tu propiedad",
@@ -74,6 +88,31 @@ export const services = {
       ],
       cta: { label: "Quiero delegar la administración", href: "#contacto" },
     },
+    {
+      title: "Vendemos tu propiedad",
+      text: "Te acompañamos en la venta, desde la publicación hasta la firma, con información clara en cada paso.",
+      items: [
+        "Presentación, publicación y promoción del inmueble",
+        "Coordinación de visitas y gestión de interesados",
+        "Acompañamiento hasta concretar la venta",
+      ],
+      cta: { label: "Quiero vender mi propiedad", href: "#contacto" },
+    },
+  ],
+};
+
+export const buyProcess = {
+  eyebrow: "Si buscas comprar",
+  title: "Proceso de compra.",
+  text: "Si estás pensando en comprar, este es el camino. Te acompañamos en la búsqueda y en cada etapa con el vendedor.",
+  image: { src: "/images/corte-casa.webp", alt: "Corte ilustrado de una casa con living, comedor y cocina" },
+  steps: [
+    { title: "Tu elección", text: "Te orientamos en la búsqueda y visitas para elegir la propiedad adecuada." },
+    { title: "Reserva", text: "Selección de la propiedad, forma de pago y entrega de documentos." },
+    { title: "Promesa", text: "Firma de la promesa de compraventa y pago del pie acordado." },
+    { title: "Escritura", text: "Crédito hipotecario con tu banco y firma de la escritura en notaría." },
+    { title: "Entrega", text: "Recepción de la propiedad, coordinada con el vendedor o la inmobiliaria." },
+    { title: "Arriendo", text: "¿Compraste para invertir? Buscamos arrendatario y administramos tu arriendo." },
   ],
 };
 
