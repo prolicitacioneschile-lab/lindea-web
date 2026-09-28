@@ -16,6 +16,7 @@ export const contact = {
   whatsappDisplay: "+56 9 3080 1241",
   instagramUser: "lindea_propiedades",
   instagramUrl: "https://instagram.com/lindea_propiedades",
+  email: "lindeapropiedades@gmail.com",
   personName: "Gonzalo Pozo",
   city: "Santiago",
   scheduleLine1: "Lunes a domingo",
@@ -46,10 +47,10 @@ export const nav = [
 ];
 
 export const hero = {
-  eyebrow: "Arriendo y administración",
+  eyebrow: "Venta, arriendo y administración",
   title: "Tu propiedad. Tu tranquilidad.",
-  text: "Nos ocupamos de arrendar tu propiedad y de su gestión mensual. Tú mantienes el control, con más tiempo para ti.",
-  primaryCta: { label: "Quiero arrendar mi propiedad", href: "#contacto" },
+  text: "Te acompañamos a vender o arrendar tu propiedad y, si lo necesitas, nos ocupamos de su gestión mensual. Tú mantienes el control, con más tiempo para ti.",
+  primaryCta: { label: "Quiero vender o arrendar", href: "#contacto" },
   secondaryCta: { label: "Mi propiedad ya está arrendada", href: "#contacto" },
 };
 

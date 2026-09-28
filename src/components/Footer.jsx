@@ -20,8 +20,10 @@ export default function Footer() {
             <span className="block w-8 h-0.5 bg-clay mb-4" />
             <ul className="space-y-2.5 text-sm">
               <li><Link to="/quienes-somos" className="hover:text-white transition">Quiénes somos</Link></li>
-              <li><a href="/#servicios" className="hover:text-white transition">Servicios</a></li>
+              <li><a href="/#servicios" className="hover:text-white transition">Venta de propiedades</a></li>
+              <li><a href="/#servicios" className="hover:text-white transition">Arriendo de propiedades</a></li>
               <li><a href="/#administracion" className="hover:text-white transition">Administración</a></li>
+              <li><a href="/#proceso-de-compra" className="hover:text-white transition">Proceso de compra</a></li>
               <li><a href="/#arrendatarios" className="hover:text-white transition">Busco arriendo</a></li>
             </ul>
           </div>
@@ -33,6 +35,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               <li><a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">WhatsApp {contact.whatsappDisplay}</a></li>
               <li><a href={contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">@{contact.instagramUser}</a></li>
+              <li><a href={`mailto:${contact.email}`} className="hover:text-white transition">{contact.email}</a></li>
               <li className="text-white/50">{contact.city}, Chile</li>
             </ul>
           </div>
